@@ -1,26 +1,164 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ── Custom scrollbar ─────────────────────────────── */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #e8600c;
+    border-radius: 3px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Keyframes ────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes revealL {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+@keyframes tick {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes sweep {
+  0%   { top: 0; opacity: 1; }
+  100% { top: 100%; opacity: 0.2; }
+}
+
+/* ── Animation utility classes ───────────────────── */
+@layer utilities {
+  .anim-fade  { animation: fadeIn  1.2s ease-out                   forwards; }
+  .anim-up    { opacity: 0; animation: slideUp 0.85s cubic-bezier(.16,1,.3,1) forwards; }
+  .anim-scale { opacity: 0; animation: scaleIn 0.8s  cubic-bezier(.16,1,.3,1) forwards; }
+  .anim-revL  { animation: revealL 1.2s cubic-bezier(.77,0,.175,1) forwards; }
+  .anim-line  { animation: lineGrow 1.5s cubic-bezier(.77,0,.175,1) forwards; }
+
+  .d100  { animation-delay: 100ms;  }
+  .d200  { animation-delay: 200ms;  }
+  .d300  { animation-delay: 300ms;  }
+  .d500  { animation-delay: 500ms;  }
+  .d700  { animation-delay: 700ms;  }
+  .d1000 { animation-delay: 1000ms; }
+  .d1200 { animation-delay: 1200ms; }
+}
+
+/* ── Scroll-reveal ───────────────────────────────── */
+@layer utilities {
+  .sr-hidden {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.95s cubic-bezier(.16,1,.3,1),
+                transform 0.95s cubic-bezier(.16,1,.3,1);
+  }
+  .sr-hidden.sr-left {
+    transform: translateX(-28px);
+  }
+  .sr-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ── Ticker ──────────────────────────────────────── */
+@layer utilities {
+  .ticker {
+    animation: tick 22s linear infinite;
+  }
+}
+
+/* ── Scan-card sweep hover ───────────────────────── */
+@layer components {
+  .scan-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .scan-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(232,96,12,.9), transparent);
+    top: -2px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scan-card:hover::after {
+    opacity: 1;
+    animation: sweep 1.5s cubic-bezier(.4,0,.6,1) forwards;
+  }
+}
+
+/* ── Blueprint grid overlay ──────────────────────── */
+@layer utilities {
+  .blueprint {
+    background-image:
+      linear-gradient(rgba(232,96,12,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232,96,12,.07) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+}
+
+/* ── Stat-bar expand on hover ────────────────────── */
+@layer components {
+  .stat-bar {
+    height: 3px;
+    width: 28px;
+    transition: width 0.5s cubic-bezier(.16,1,.3,1);
+  }
+  .stat-item:hover .stat-bar {
+    width: 100%;
+  }
+}
+
+/* ── No-scrollbar utility ────────────────────────── */
+@layer utilities {
+  .no-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Carousel ────────────────────────────────────── */
+@layer components {
+  .carousel-track {
+    display: flex;
+    gap: 20px;
+    transform: translateX(var(--carousel-translate, 0px));
+    transition: var(--carousel-transition, none);
+  }
+  .carousel-card {
+    width: var(--card-width, auto);
+    flex-shrink: 0;
+  }
 }
