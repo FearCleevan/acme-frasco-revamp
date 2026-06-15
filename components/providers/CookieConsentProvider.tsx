@@ -35,9 +35,10 @@ function parseCookieConsent(): ConsentState | null {
 function writeConsentCookie(state: ConsentState) {
   const expires = new Date();
   expires.setDate(expires.getDate() + EXPIRY_DAYS);
+  const secure = location.protocol === "https:" ? "; Secure" : "";
   document.cookie = `${COOKIE_NAME}=${encodeURIComponent(
     JSON.stringify(state)
-  )}; expires=${expires.toUTCString()}; path=/; SameSite=Lax`;
+  )}; expires=${expires.toUTCString()}; path=/; SameSite=Lax${secure}`;
 }
 
 const ConsentContext = createContext<ConsentContextValue>({

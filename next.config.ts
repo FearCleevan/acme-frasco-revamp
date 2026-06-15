@@ -9,9 +9,11 @@ const ContentSecurityPolicy = `
   font-src 'self' data: https://fonts.gstatic.com;
   img-src 'self' data: blob:;
   connect-src 'self' https://script.google.com https://script.googleusercontent.com;
+  form-action 'self';
   frame-ancestors 'none';
   object-src 'none';
   base-uri 'self';
+  upgrade-insecure-requests;
 `.replace(/\n/g, " ").trim();
 
 const securityHeaders = [
@@ -20,6 +22,8 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+  { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "X-Permitted-Cross-Domain-Policies", value: "none" },
   { key: "Content-Security-Policy", value: ContentSecurityPolicy },
 ];
 
