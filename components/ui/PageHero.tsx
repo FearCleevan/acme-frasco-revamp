@@ -36,7 +36,7 @@ export default function PageHero({
       <img
         src={imageUrl}
         alt={imageAlt}
-        className="absolute inset-0 w-full h-full object-cover anim-scale"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Dark overlay */}
