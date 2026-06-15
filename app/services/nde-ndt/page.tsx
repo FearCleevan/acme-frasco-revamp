@@ -51,7 +51,7 @@ export default function NdePage() {
   return (
     <div className="pt-16">
       <PageHero
-        imageUrl="/Xray_vault-scaled.jpg"
+        imageUrl="/Xray_vault-scaled.webp"
         imageAlt="NDT inspection technician at industrial facility"
         tag="Non-Destructive Evaluation"
         titleLine1="NDE / NDT"
@@ -97,7 +97,7 @@ export default function NdePage() {
           <ScrollReveal className="lg:w-1/2 w-full" delay={150}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/Non-destructive-testing-and-evaluation-1.jpg"
+              src="/Non-destructive-testing-and-evaluation-1.webp"
               alt="Non-destructive testing and evaluation"
               className="w-full h-auto object-cover shadow-heavy"
             />
@@ -114,7 +114,7 @@ export default function NdePage() {
           <ScrollReveal className="lg:w-1/2 w-full" delay={150}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/Non-destructive-evaluation.jpg"
+              src="/Non-destructive-evaluation.webp"
               alt="Non-destructive evaluation inspector"
               className="w-full h-auto object-cover shadow-heavy"
             />

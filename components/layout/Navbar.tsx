@@ -37,14 +37,14 @@ const featuredCards = [
     href:      "/services/nde-ndt",
     category:  "Core Service",
     title:     "NDE / NDT",
-    imageUrl:  "/Non-destructive-evaluation.jpg",
+    imageUrl:  "/Non-destructive-evaluation.webp",
     accent:    "text-orange",
   },
   {
     href:      "/services/lifting-equipment",
     category:  "Certification",
     title:     "Lifting Equipment",
-    imageUrl:  "/industrial-lifting-equipment.jpg",
+    imageUrl:  "/industrial-lifting-equipment.webp",
     accent:    "text-amber",
   },
 ];
@@ -74,7 +74,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="FRASCO Industrial Inspection"
               className="h-9 w-auto"
             />

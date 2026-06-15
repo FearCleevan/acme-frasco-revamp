@@ -10,37 +10,37 @@ export const homepageIndustries: Industry[] = [
     id: 1,
     name: "Energy",
     imageUrl:
-      "/Non-destructive-testing-and-evaluation-1.jpg",
+      "/Non-destructive-testing-and-evaluation-1.webp",
   },
   {
     id: 2,
     name: "Refining &\nUpgrading",
     imageUrl:
-      "/6.jpg",
+      "/6.webp",
   },
   {
     id: 3,
     name: "Power\nGeneration",
     imageUrl:
-      "/7.jpg",
+      "/7.webp",
   },
   {
     id: 4,
     name: "Marine",
     imageUrl:
-      "/133252734_m-scaled.jpg",
+      "/133252734_m-scaled.webp",
   },
   {
     id: 5,
     name: "Mining",
     imageUrl:
-      "/1.jpg",
+      "/1.webp",
   },
   {
     id: 6,
     name: "Construction &\nOffshore",
     imageUrl:
-      "/4.jpg",
+      "/4.webp",
   },
 ];
 

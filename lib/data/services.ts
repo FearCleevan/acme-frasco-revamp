@@ -29,7 +29,7 @@ export const homepageServices: HomepageService[] = [
       "Eddy current, near field, magnetic particle, liquid penetrant, ultrasonic, thermography, borescope, PMI and remote visual. No coating removal required.",
     href: "/services/nde-ndt",
     imageUrl:
-      "/Non-destructive-evaluation.jpg",
+      "/Non-destructive-evaluation.webp",
     ctaLabel: "View Methods",
     featured: true,
     aspectClass: "aspect-[2/1]",
@@ -44,7 +44,7 @@ export const homepageServices: HomepageService[] = [
       "Chillers, condensers, evaporators, heat exchangers, fin fans and boilers.",
     href: "/services/tube-inspection",
     imageUrl:
-      "/Industrial-tube-inspection-Eddy-current-tube-inspection.jpg",
+      "/Industrial-tube-inspection-Eddy-current-tube-inspection.webp",
     ctaLabel: "View Methods",
     featured: false,
     aspectClass: "aspect-square",
@@ -59,7 +59,7 @@ export const homepageServices: HomepageService[] = [
       "Weld testing, API pressure vessel, storage tanks, piping, 3rd-party verification, audit, dimensional, turnaround.",
     href: "/services/asset-integrity",
     imageUrl:
-      "/tube.jpg",
+      "/tube.webp",
     ctaLabel: "View Methods",
     featured: false,
     aspectClass: "aspect-square",
@@ -74,7 +74,7 @@ export const homepageServices: HomepageService[] = [
       "Certification, wire rope, fork lifts, gantry cranes, cranes & components, work station cranes.",
     href: "/services/lifting-equipment",
     imageUrl:
-      "/industrial-lifting-equipment.jpg",
+      "/industrial-lifting-equipment.webp",
     ctaLabel: "View Scope",
     featured: false,
     aspectClass: "aspect-square",

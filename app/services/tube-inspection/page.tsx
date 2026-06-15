@@ -43,7 +43,7 @@ export default function TubeInspectionPage() {
   return (
     <div className="pt-16">
       <PageHero
-        imageUrl="/tube.jpg"
+        imageUrl="/tube.webp"
         imageAlt="Tube inspection equipment"
         tag="Preventative Inspection"
         titleLine1="Tube"
@@ -95,7 +95,7 @@ export default function TubeInspectionPage() {
           <ScrollReveal className="lg:w-1/2 w-full" delay={150}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/Industrial-tube-inspection-Eddy-current-tube-inspection.jpg"
+              src="/Industrial-tube-inspection-Eddy-current-tube-inspection.webp"
               alt="Industrial tube inspection — eddy current tube system"
               className="w-full h-auto object-cover shadow-heavy"
             />

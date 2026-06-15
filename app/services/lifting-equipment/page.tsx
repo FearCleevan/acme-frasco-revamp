@@ -40,7 +40,7 @@ export default function LiftingEquipmentPage() {
   return (
     <div className="pt-16">
       <PageHero
-        imageUrl="/133252734_m-scaled.jpg"
+        imageUrl="/133252734_m-scaled.webp"
         imageAlt="Lifting equipment — gantry crane"
         tag="Certification & Compliance"
         titleLine1="Lifting"
@@ -82,7 +82,7 @@ export default function LiftingEquipmentPage() {
           <ScrollReveal className="lg:w-1/2 w-full" delay={150}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/industrial-lifting-equipment.jpg"
+              src="/industrial-lifting-equipment.webp"
               alt="Industrial lifting equipment — cranes at refinery"
               className="w-full h-auto object-cover shadow-heavy"
             />

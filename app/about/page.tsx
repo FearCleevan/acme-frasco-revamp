@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       <PageHero
-        imageUrl="/3.jpg"
+        imageUrl="/3.webp"
         imageAlt="Frasco inspection team"
         tag="Dartmouth, Nova Scotia"
         titleLine1="About"

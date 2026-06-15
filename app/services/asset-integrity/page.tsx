@@ -43,7 +43,7 @@ export default function AssetIntegrityPage() {
   return (
     <div className="pt-16">
       <PageHero
-        imageUrl="/2.jpg"
+        imageUrl="/2.webp"
         imageAlt="Asset integrity inspection"
         tag="QA · QC · Compliance"
         titleLine1="Asset"
@@ -60,7 +60,7 @@ export default function AssetIntegrityPage() {
           <ScrollReveal className="lg:w-1/2 w-full" delay={150}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/industrial-lifting-equipment.jpg"
+              src="/industrial-lifting-equipment.webp"
               alt="Asset integrity — industrial inspection site"
               className="w-full h-auto object-cover shadow-heavy"
             />
