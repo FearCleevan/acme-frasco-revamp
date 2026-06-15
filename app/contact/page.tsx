@@ -1,12 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import ContactInfoPanel from "@/components/sections/contact/ContactInfoPanel";
 import ContactForm from "@/components/sections/contact/ContactForm";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-export const metadata = {
-  title: "Contact Us | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "Contact FRASCO — Request an Inspection",
   description:
     "Request an inspection or get in touch with Frasco Industrial Inspections. Available 24/7 across Eastern Canada for NDE, tube inspection, asset integrity, and lifting equipment.",
+  keywords: [
+    "industrial inspection quote Nova Scotia",
+    "contact NDT inspector Halifax",
+    "request NDE inspection",
+    "inspection services Dartmouth NS",
+    "FRASCO contact",
+  ],
+  alternates: { canonical: "https://frasco.ca/contact" },
+  openGraph: {
+    title: "Contact FRASCO — Request an Inspection",
+    description:
+      "Request an inspection 24/7 across Eastern Canada. NDE, tube inspection, asset integrity, and lifting equipment.",
+    url: "https://frasco.ca/contact",
+  },
 };
 
 const quickLinks = [

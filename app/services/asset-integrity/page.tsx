@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import CtaSection from "@/components/ui/CtaSection";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -5,10 +6,25 @@ import MethodsGrid from "@/components/sections/services/MethodsGrid";
 import ServiceProcessSteps from "@/components/sections/services/ServiceProcessSteps";
 import { assetServices } from "@/lib/data/services";
 
-export const metadata = {
-  title: "Asset Integrity Services | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "Asset Integrity Management — Industrial Nova Scotia",
   description:
-    "Asset Integrity, QA and QC services — weld testing, API pressure vessel, storage tanks, piping, third-party verification, turnaround inspection. API 510/570/653, CWB CSA W178.2 certified.",
+    "API 510, 570, 653 certified asset integrity inspections. Pressure vessels, piping, storage tanks, and turnaround inspections across Nova Scotia.",
+  keywords: [
+    "asset integrity inspection Nova Scotia",
+    "corrosion inspection NS",
+    "API 510 inspection Halifax",
+    "pressure vessel inspection Nova Scotia",
+    "storage tank inspection Canada",
+    "QA QC inspection Nova Scotia",
+  ],
+  alternates: { canonical: "https://frasco.ca/services/asset-integrity" },
+  openGraph: {
+    title: "Asset Integrity Management — Industrial Nova Scotia | FRASCO",
+    description:
+      "API 510/570/653 pressure vessel, piping, and storage tank inspections across Nova Scotia.",
+    url: "https://frasco.ca/services/asset-integrity",
+  },
 };
 
 const serviceList = [

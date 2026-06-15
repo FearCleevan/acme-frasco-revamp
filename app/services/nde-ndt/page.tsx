@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import CtaSection from "@/components/ui/CtaSection";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -6,10 +7,26 @@ import ServiceProcessSteps from "@/components/sections/services/ServiceProcessSt
 import { ndeMethods } from "@/lib/data/services";
 import { certifications } from "@/lib/data/certifications";
 
-export const metadata = {
-  title: "NDE / NDT Services | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "NDE/NDT Inspection Services — Nova Scotia",
   description:
     "Nine certified NDE/NDT inspection methods. No coating removal required. Same-day results. Available 24/7 across Nova Scotia and beyond.",
+  keywords: [
+    "non-destructive testing Nova Scotia",
+    "NDE inspection Halifax",
+    "NDT services Dartmouth",
+    "eddy current testing Nova Scotia",
+    "CGSB 48.9712 certified",
+    "magnetic particle inspection NS",
+    "ultrasonic testing Nova Scotia",
+  ],
+  alternates: { canonical: "https://frasco.ca/services/nde-ndt" },
+  openGraph: {
+    title: "NDE/NDT Inspection Services — Nova Scotia | FRASCO",
+    description:
+      "Nine certified NDE/NDT methods, same-day results, available 24/7. Serving Nova Scotia and Eastern Canada.",
+    url: "https://frasco.ca/services/nde-ndt",
+  },
 };
 
 const methods = [

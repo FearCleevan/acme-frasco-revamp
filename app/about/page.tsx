@@ -1,14 +1,29 @@
-﻿import PageHero from "@/components/ui/PageHero";
+﻿import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
 import CtaSection from "@/components/ui/CtaSection";
 import MissionSection from "@/components/sections/about/MissionSection";
 import CertificationsGrid from "@/components/sections/about/CertificationsGrid";
 import IndustriesGrid from "@/components/sections/about/IndustriesGrid";
 import ServiceAreaGrid from "@/components/sections/about/ServiceAreaGrid";
 
-export const metadata = {
-  title: "About Us | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "About FRASCO — CGSB Certified Industrial Inspectors, Dartmouth NS",
   description:
     "Certified NDT personnel based in Dartmouth, NS. Available 24/7 across Nova Scotia, New Brunswick, Newfoundland, and beyond.",
+  keywords: [
+    "CGSB certified NDT inspectors",
+    "industrial inspection company Nova Scotia",
+    "NDE company Dartmouth",
+    "certified NDT personnel",
+    "about FRASCO inspections",
+  ],
+  alternates: { canonical: "https://frasco.ca/about" },
+  openGraph: {
+    title: "About FRASCO — CGSB Certified Industrial Inspectors",
+    description:
+      "Certified NDT personnel based in Dartmouth, NS. Available 24/7 across Nova Scotia, New Brunswick, Newfoundland, and beyond.",
+    url: "https://frasco.ca/about",
+  },
 };
 
 export default function AboutPage() {

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import CtaSection from "@/components/ui/CtaSection";
 import MethodsGrid from "@/components/sections/services/MethodsGrid";
@@ -5,10 +6,25 @@ import ServiceProcessSteps from "@/components/sections/services/ServiceProcessSt
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { tubeMethods } from "@/lib/data/services";
 
-export const metadata = {
-  title: "Tube Inspection Services | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "Tube Inspection Services — Heat Exchanger & Boiler NS",
   description:
     "Comprehensive ECT tube inspection for chillers, condensers, heat exchangers, boilers and more. Same-day reporting. Available 24/7.",
+  keywords: [
+    "tube inspection Nova Scotia",
+    "heat exchanger inspection Canada",
+    "eddy current tube inspection Halifax",
+    "chiller tube inspection NS",
+    "NFT tube inspection",
+    "condenser tube inspection Eastern Canada",
+  ],
+  alternates: { canonical: "https://frasco.ca/services/tube-inspection" },
+  openGraph: {
+    title: "Tube Inspection Services — Heat Exchanger & Boiler | FRASCO",
+    description:
+      "ECT tube inspection for chillers, condensers, heat exchangers, and boilers. Same-day reporting across Nova Scotia.",
+    url: "https://frasco.ca/services/tube-inspection",
+  },
 };
 
 const evaluationMethods = [

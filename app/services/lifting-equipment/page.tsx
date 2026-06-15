@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import CtaSection from "@/components/ui/CtaSection";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -5,10 +6,25 @@ import MethodsGrid from "@/components/sections/services/MethodsGrid";
 import ServiceProcessSteps from "@/components/sections/services/ServiceProcessSteps";
 import { liftingTypes } from "@/lib/data/services";
 
-export const metadata = {
-  title: "Lifting Equipment Inspection | Frasco Industrial Inspections",
+export const metadata: Metadata = {
+  title: "Lifting Equipment Certification — Nova Scotia",
   description:
-    "Certified lifting equipment inspection — cranes, wire rope, forklifts, gantry and work station cranes. CSA compliant. Available 24/7 across Eastern Canada.",
+    "CSA-compliant lifting equipment certification for cranes, wire rope, forklifts, gantry cranes and more across Nova Scotia.",
+  keywords: [
+    "lifting equipment certification NS",
+    "crane inspection Nova Scotia",
+    "wire rope inspection Halifax",
+    "forklift certification Nova Scotia",
+    "CSA lifting equipment",
+    "gantry crane inspection Canada",
+  ],
+  alternates: { canonical: "https://frasco.ca/services/lifting-equipment" },
+  openGraph: {
+    title: "Lifting Equipment Certification — Nova Scotia | FRASCO",
+    description:
+      "CSA-compliant certification for cranes, wire rope, forklifts, and gantry cranes across Nova Scotia.",
+    url: "https://frasco.ca/services/lifting-equipment",
+  },
 };
 
 const serviceList = [
