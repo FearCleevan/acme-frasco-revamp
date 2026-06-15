@@ -38,11 +38,11 @@ export default function HeroSection() {
       <img
         src="/image.webp"
         alt="Industrial inspection"
-        className="absolute inset-0 w-full h-full object-cover anim-scale d200"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-ink/65 anim-fade d300" />
+      <div className="absolute inset-0 bg-ink/65" />
       <div className="absolute inset-0 blueprint opacity-50 pointer-events-none" />
 
       {/* Scroll indicator */}
